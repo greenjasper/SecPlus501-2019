@@ -4,5 +4,5 @@ morea_id: footer
 morea_type: footer
 ---
 
-Example Name | Example Department | Example University
-email@example.com
+Jasper Green | PCATT - Pacific Center for Advanced Technology Training | University of Hawaii |
+jasperl@hawaii.edu
