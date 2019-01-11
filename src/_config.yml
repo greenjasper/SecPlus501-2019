@@ -1,13 +1,13 @@
-name: Morea CORE (Change me)
+name: Security+ 501 (SY0-501) Boot Camp
 markdown: kramdown
 kramdown:
   hard_wrap: false
   input: GFM
   syntax_highlighter: rouge
 mathjax: true
-baseurl: /core
+baseurl: /SecPlus501-2019
 exclude: [morea]
-morea_theme: spacelab
+morea_theme: superhero
 morea_navbar_items:
   #- Prerequisites
   - Modules
@@ -24,5 +24,5 @@ morea_navbar_items:
 # morea_domain: http://morea-framework.github.io/
 # morea_google_analytics_tracking_id: "<your tracking id here>"
 
-#morea_head_breadcrumb_link: "http://cnn.com"
-#morea_head_breadcrumb_label: "CNN Site"
+#morea_head_breadcrumb_link: "https://pcatt.org"
+#morea_head_breadcrumb_label: "PCATT Site"
