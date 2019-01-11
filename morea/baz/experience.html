@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Experience the Baz | Security+ 501 (SY0-501) Boot Camp </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/SecPlus501-2019/css/themes/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="/SecPlus501-2019/css/style.css">
+  <link rel="stylesheet" href="/SecPlus501-2019/css/syntax.css">
+  <link rel="shortcut icon" href="/SecPlus501-2019/favicon.ico" type="image/x-icon"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  
+  <script type="text/javascript"
+          src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+  
+
+  <script>
+    $(window).load(function () {
+      // If on a page associated with a navbar item, make its navbar item 'active'.
+      $('.navbar-nav').find('a[href="' + location.pathname + '"]').parents('li').addClass('active');
+    });
+  </script>
+
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/SecPlus501-2019/index.html"> Security+ 501 (SY0-501) Boot Camp </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        
+        <li><a href="/SecPlus501-2019/modules/">Modules</a></li>
+        
+        <li><a href="/SecPlus501-2019/outcomes/">Outcomes</a></li>
+        
+        
+        <li><a href="/SecPlus501-2019/readings/">Readings</a></li>
+        
+        
+        <li><a href="/SecPlus501-2019/experiences/">Experiences</a></li>
+        
+        
+        <li><a href="/SecPlus501-2019/assessments/">Assessments</a></li>
+        
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="breadcrumb-bar">
+  <div class="container">
+    <ol class="breadcrumb">
+      
+      <li><a href="/SecPlus501-2019/">Home</a></li>
+      <li><a href="/SecPlus501-2019/modules">Modules</a></li>
+      <li><a href="/SecPlus501-2019/modules/baz">Learn to Baz</a></li>
+      <li class="active">Experience the Baz</li>
+    </ol>
+  </div>
+</div>
+
+
+<div class="container">
+  <h3 id="experiential-learning-3">Experiential Learning 3</h3>
+
+<p>An experiential learning opportunity.  Here’s some java code:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+</pre></td><td class="code"><pre>    <span class="kn">package</span> <span class="n">ics311</span><span class="o">;</span>
+
+    <span class="kn">import</span> <span class="nn">java.util.Map.Entry</span><span class="o">;</span>
+
+    <span class="cm">/**
+     * This interface is to be used for all of the Dynamic Sets you create for this assignment.
+     *
+     * @author      Robert Ward
+     * @version     1.0
+     * @since       2014-02-01
+     */</span>
+    <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">DynamicSet</span><span class="o">&lt;</span><span class="n">Key</span> <span class="kd">extends</span> <span class="n">Comparable</span><span class="o">&lt;</span><span class="n">Key</span><span class="o">&gt;</span> <span class="o">,</span> <span class="n">Value</span><span class="o">&gt;</span> <span class="o">{</span>
+
+
+
+       <span class="cm">/**
+        * Returns the name of Data Structure this set uses.
+        *
+        * @return  the name of Data Structure this set uses.
+        */</span>
+        <span class="kd">public</span> <span class="n">String</span> <span class="nf">setDataStructure</span><span class="o">();</span>
+
+       <span class="cm">/**
+        * Returns the number of key-value mappings in this set.
+        * This method returns zero if the set is empty
+        *
+        * @return  the number of key-value mappings in this set.
+        */</span>
+        <span class="kd">public</span> <span class="kt">int</span> <span class="nf">size</span><span class="o">();</span>
+
+        <span class="cm">/**
+        * Associates the specified value with the specified key in this map.
+        * If the map previously contained a mapping for the key, the old value is replaced.
+        * If there is no current mapping for this key return null,
+        * otherwise the previous value associated with key.
+        *
+        * @param  key - key with which the specified value is to be associated
+        * @param  value - value to be associated with the specified key
+        *
+        * @return the previous value associated with key, or null if there was no mapping for key.
+        *  (A null return can also indicate that the map previously associated null with key.)
+        */</span>
+        <span class="kd">public</span> <span class="n">Value</span> <span class="nf">insert</span><span class="o">(</span><span class="n">Key</span> <span class="n">key</span><span class="o">,</span> <span class="n">Value</span> <span class="n">value</span><span class="o">);</span>
+
+
+        <span class="cm">/**
+        * Removes the mapping for this key from this set if present.
+        *
+        * @param key - key for which mapping should be removed
+        *
+        * @return the previous value associated with key, or null if there was no mapping for key.
+        * (A null return can also indicate that the map previously associated null with key.)
+        */</span>
+        <span class="kd">public</span> <span class="n">Value</span> <span class="nf">delete</span><span class="o">(</span><span class="n">Key</span> <span class="n">key</span><span class="o">);</span>
+
+
+        <span class="cm">/**
+        * Returns the value to which the specified key is mapped, or null if this set contains no
+            * mapping for the key.
+        *
+        * @param  key The key under which this data is stored.
+        *
+        * @return the Value of element stored in the set under the Key key.
+        */</span>
+        <span class="kd">public</span> <span class="n">Value</span> <span class="nf">retrieve</span><span class="o">(</span><span class="n">Key</span> <span class="n">key</span><span class="o">);</span>
+
+
+        <span class="cm">/**
+        * Returns a key-value mapping associated with the least key in this map, or null if the set
+            * is empty.
+        * IMPORTANT: This operation only applies when there is a total ordering on the Key
+        * Returns null if the set is empty. If there is not total ordering on the Key returns null.
+        *
+        * @return an entry with the least key, or null if this map is empty
+        */</span>
+        <span class="kd">public</span> <span class="n">Entry</span><span class="o">&lt;</span><span class="n">Key</span><span class="o">,</span> <span class="n">Value</span><span class="o">&gt;</span>  <span class="nf">minimum</span><span class="o">(</span> <span class="o">);</span>
+
+
+        <span class="cm">/**
+        * Returns a key-value mapping associated with the greatest key in this map, or null if the
+            * map is empty.
+        * IMPORTANT: This operation only applies when there is a total ordering on the Key
+        * Returns null if the set is empty. If there is not total ordering on the key returns null.
+        *
+        * @return an entry with the greatest key, or null if this map is empty.
+        */</span>
+        <span class="kd">public</span> <span class="n">Entry</span><span class="o">&lt;</span><span class="n">Key</span><span class="o">,</span> <span class="n">Value</span><span class="o">&gt;</span>  <span class="nf">maximum</span><span class="o">(</span> <span class="o">);</span>
+
+
+        <span class="cm">/**
+        * Returns a key-value mapping associated with the least key strictly greater than the given
+            * key, or null if there is no such key.
+        * IMPORTANT: This operation only applies when there is a total ordering on the key
+        * Returns null if the set is empty or the key is not found.
+        * Returns null if the key is the maximum element.
+        * If there is not total ordering on the key for the set returns null.
+        * @param key - the key
+        *
+        * @return an entry with the greatest key less than key, or null if there is no such key
+        */</span>
+        <span class="kd">public</span> <span class="n">Entry</span><span class="o">&lt;</span><span class="n">Key</span><span class="o">,</span> <span class="n">Value</span><span class="o">&gt;</span>  <span class="nf">successor</span><span class="o">(</span><span class="n">Key</span> <span class="n">key</span><span class="o">);</span>
+
+        <span class="cm">/**
+        * Returns a key-value mapping associated with the greatest key strictly less than the given
+            * key, or null if there is no such key.
+        * IMPORTANT: This operation only applies when there is a total ordering on the key
+        * Returns null if the set is empty or the key is not found.
+        * Returns null if the key is the minimum element.
+        * If there is not total ordering on the key for the set returns null.
+        * @param key - the key
+        *
+        * @return an entry with the greatest key less than key, or null if there is no such key
+        */</span>
+        <span class="kd">public</span> <span class="n">Entry</span><span class="o">&lt;</span><span class="n">Key</span><span class="o">,</span> <span class="n">Value</span><span class="o">&gt;</span>  <span class="nf">predecessor</span><span class="o">(</span><span class="n">Key</span> <span class="n">key</span><span class="o">);</span>
+
+
+    <span class="o">}</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+
+
+
+<script src="/SecPlus501-2019/js/scrollIfAnchor.js"></script>
+
+<div class="footer-background hidden-print">
+  <footer>
+    <div class="container page-footer">
+      
+      <p>Example Name | Example Department | Example University
+email@example.com</p>
+
+      
+      <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
+        Last update on: <span>2019-01-11 11:37:36 -1000</span></p>
+
+      <p style="margin: 0">
+        
+        4 modules
+        
+        | 3 outcomes
+        
+        
+        | 4 readings
+        
+        
+        | 3 experiences
+        
+        
+        | 3 assessments
+        
+      </p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
